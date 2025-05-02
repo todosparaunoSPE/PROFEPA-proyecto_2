@@ -2,7 +2,7 @@
 """
 Created on Thu May  1 18:29:15 2025
 
-@author: jahop
+@author: Javier Horacio Perez Ricarde
 """
 
 import streamlit as st
