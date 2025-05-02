@@ -11,12 +11,14 @@ import pandas as pd
 import spacy
 from urllib.parse import quote
 
-# Cargar modelo de spaCy (debe estar especificado en requirements.txt)
+# Reemplaza el bloque try-catch original con esto:
 try:
     nlp = spacy.load("es_core_news_sm")
 except:
-    st.error("Error al cargar el modelo de spaCy. Verifica que esté correctamente instalado.")
-    st.stop()
+    import subprocess
+    import sys
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "https://github.com/explosion/spacy-models/releases/download/es_core_news_sm-3.7.0/es_core_news_sm-3.7.0-py3-none-any.whl"])
+    nlp = spacy.load("es_core_news_sm")
 
 # Lista de estados mexicanos
 estados_mexicanos = [
