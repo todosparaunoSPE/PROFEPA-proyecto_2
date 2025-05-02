@@ -1,5 +1,5 @@
-streamlit==1.32.2
-feedparser==6.0.10
-pandas==2.2.2
-spacy==3.6.1
-thinc==8.1.12
+streamlit
+feedparser
+pandas
+spacy
+es-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/es_core_news_sm-3.7.0/es_core_news_sm-3.7.0-py3-none-any.whl
