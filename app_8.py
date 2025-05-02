@@ -94,7 +94,7 @@ st.sidebar.markdown("""
 """)
 
 # Título principal
-st.title("🌎 Monitor de Incidentes Ambientales en México (NLP)")
+st.title("🌎 PROFEPA: Monitor de Incidentes Ambientales en México (NLP)")
 
 # Entrada de consulta
 query = st.text_input("🔍 Palabra clave (ej: derrame petróleo, incendio forestal):", "incendio forestal")
