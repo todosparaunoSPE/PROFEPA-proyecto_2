@@ -9,15 +9,14 @@ import streamlit as st
 import feedparser
 import pandas as pd
 import spacy
-import spacy.cli
 from urllib.parse import quote
 
-# Intentar descargar el modelo de spaCy si no está instalado
+# Cargar modelo de spaCy (debe estar especificado en requirements.txt)
 try:
     nlp = spacy.load("es_core_news_sm")
-except OSError:
-    spacy.cli.download("es_core_news_sm")
-    nlp = spacy.load("es_core_news_sm")
+except:
+    st.error("Error al cargar el modelo de spaCy. Verifica que esté correctamente instalado.")
+    st.stop()
 
 # Lista de estados mexicanos
 estados_mexicanos = [
